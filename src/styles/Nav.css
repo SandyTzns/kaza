@@ -1,0 +1,39 @@
+nav {
+  margin: 20px auto;
+  max-width: 90%;
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: 600px) {
+    height: 68px;
+  }
+}
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 20px;
+
+  @media (min-width: 600px) {
+    gap: 50px;
+  }
+}
+
+nav ul a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ff6060;
+  font-size: 12px;
+  font-weight: 500;
+
+  @media (min-width: 600px) {
+    font-size: 24px;
+    text-transform: capitalize;
+  }
+}

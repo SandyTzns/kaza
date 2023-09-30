@@ -1,0 +1,46 @@
+.thumbnail-grid {
+  margin: 20px auto;
+  max-width: 90%;
+  padding: 20px 0;
+  background-color: #f6f6f6;
+  border-radius: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 0;
+}
+.thumbnail-container {
+  position: relative;
+  margin: 30px;
+}
+
+.thumbnail-img {
+  height: 155px;
+  min-width: 335px;
+  border-radius: 10px;
+  margin: 0;
+  cursor: pointer;
+  object-fit: cover;
+  filter: brightness(0.7);
+
+  @media (min-width: 482px) {
+    height: 340px;
+    width: 340px;
+  }
+}
+
+.thumbnail-img:hover {
+  filter: brightness(1);
+}
+
+.thumbnail-text {
+  position: absolute;
+  font-size: 18px;
+  font-weight: 500;
+  color: #ffff;
+  letter-spacing: 0.5px;
+  margin: 0;
+  bottom: 30px;
+  left: 10px;
+  box-shadow: inset;
+}

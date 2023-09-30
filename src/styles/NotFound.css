@@ -1,0 +1,23 @@
+.nf-div {
+  height: 76vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff6060;
+}
+
+.nf-number {
+  font-size: 288px;
+  font-weight: bold;
+}
+
+.nf-text {
+  font-size: 36px;
+}
+
+.nf-link {
+  color: #ff6060;
+  padding-top: 100px;
+  font-size: 18px;
+}

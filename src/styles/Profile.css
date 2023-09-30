@@ -1,0 +1,71 @@
+.apart-name,
+.tenant {
+  margin: 20px auto;
+  max-width: 90%;
+  color: #ff6060;
+}
+.appart-title {
+  font-weight: 500;
+}
+
+.apart-city {
+  margin: 10px 0;
+}
+
+.tag-container {
+  display: flex;
+  gap: 20px;
+}
+
+.tenant {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.tenant-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tenant-name {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+.tenant-photo {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff6060;
+  color: white;
+  height: 100%px;
+  width: auto;
+  padding: 5px 20px;
+  border-radius: 30px;
+
+  /* @media (min-width: 480px) {
+    height: 25px;
+    width: 115px;
+    border-radius: 10px;
+  } */
+}
+
+/* 
+.tag-name {
+  color: #ffffff;
+  font-size: 10px;
+
+  @media (min-width: 480px) {
+    font-size: 14px;
+  }
+} */
