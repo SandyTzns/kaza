@@ -24,7 +24,6 @@ export const Carousel = ({ data }) => {
       />
 
       {data[0].pictures.map((pic, idx) => {
-        console.log(idx)
         return (
           <img
             src={pic}
@@ -42,23 +41,9 @@ export const Carousel = ({ data }) => {
         className="arrow arrow-forward"
       />
 
-      {data[0].pictures.map((_, idx) => {
-        return (
-          <span key={idx} className="indicator">
-            {idx}/{idx.length}
-          </span>
-        )
-      })}
+      <span key={data[0].id} className="indicator">
+        {slide + 1} / {data[0].pictures.length}
+      </span>
     </div>
   )
 }
-
-/* <img src={appart} alt="interior design" "></img> */
-
-//  ;<img
-//    src={data[0].cover}
-//    alt={data[0].title}
-//    key={data[0].id}
-//    className="slide"
-//    // className={slide === data[0].id ? 'slide' : 'slide slide-hidden'}
-//  />

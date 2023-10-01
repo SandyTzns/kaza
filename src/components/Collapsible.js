@@ -1,28 +1,37 @@
-import { Accordeon } from './Accordeon'
+import { useState } from 'react'
+import '../styles/Collapsible.css'
+import arrow_down from '../images/arrow_down.png'
+import arrow_up from '../images/arrow_up.png'
 
-export const Collapsible = () => {
-  return <Accordeon data={aboutData} />
+export const Collapsible = ({ data }) => {
+  const [selected, setSelected] = useState(null)
+
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null)
+    }
+    setSelected(i)
+  }
+
+  return (
+    <div className="wrapper">
+      {data.map((item, i) => (
+        <div className="dropdown" key={i}>
+          <div className="title" onClick={() => toggle(i)}>
+            <h2>{item.title}</h2>
+            <span className="arrows">
+              {selected === i ? (
+                <img src={arrow_up} alt="arrow up" />
+              ) : (
+                <img src={arrow_down} alt="arrow down" />
+              )}
+            </span>
+          </div>
+          <div className={selected === i ? 'content show' : 'content'}>
+            {item.content}
+          </div>
+        </div>
+      ))}
+    </div>
+  )
 }
-
-const aboutData = [
-  {
-    title: 'Fiabilité',
-    content:
-      'Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.',
-  },
-  {
-    title: 'Respect',
-    content:
-      'La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme.',
-  },
-  {
-    title: 'Service',
-    content:
-      'Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. Nhésitez pas à nous contacter si vous avez la moindre question.',
-  },
-  {
-    title: 'Sécurité',
-    content:
-      'La sécurité est la priorité de Kasa. Aussi bien pour nos hôtes que pour les voyageurs, chaque logement correspond aux critères de sécurité établis par nos services. En laissant une note aussi bien à lhôte quau locataire, cela permet à nos équipes de vérifier que les standards sont bien respectés. Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes.',
-  },
-]

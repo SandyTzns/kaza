@@ -1,0 +1,15 @@
+.stars {
+  display: flex;
+  font-size: 30px;
+  width: 130px;
+  gap: 10px;
+}
+
+.span1 {
+  color: var(--colorRed);
+  text-shadow: 0px 0px 5px rgb(180, 166, 166);
+}
+
+.span2 {
+  color: #e3e3e3;
+}

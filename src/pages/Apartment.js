@@ -1,7 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { Carousel } from '../components/Carousel'
 import { Profile } from '../components/Profile'
-import { AppartAccordeon } from '../components/AppartAccordeon'
+
 
 // J'importe le fichier json
 import AppartList from '../data/appart.json'
@@ -17,7 +17,7 @@ export const Apartment = () => {
     <div>
       <Carousel data={logementData} />
       <Profile data={logementData} />
-      <AppartAccordeon data={logementData} />
+      
     </div>
   )
 }
