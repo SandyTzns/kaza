@@ -1,6 +1,6 @@
 .thumbnail-grid {
   margin: 20px auto;
-  max-width: 90%;
+  max-width: 100%;
   padding: 20px 0;
   background-color: #f6f6f6;
   border-radius: 25px;
@@ -15,18 +15,13 @@
 }
 
 .thumbnail-img {
-  height: 155px;
-  min-width: 335px;
+  height: 310px;
+  width: 450px;
   border-radius: 10px;
   margin: 0;
   cursor: pointer;
   object-fit: cover;
   filter: brightness(0.7);
-
-  @media (min-width: 482px) {
-    height: 340px;
-    width: 340px;
-  }
 }
 
 .thumbnail-img:hover {
@@ -43,4 +38,12 @@
   bottom: 30px;
   left: 10px;
   box-shadow: inset;
+}
+
+/* ******  MEDIA QUERIES  ****** */
+@media (min-width: 768px) {
+  .thumbnail-img {
+    height: 340px;
+    width: 340px;
+  }
 }

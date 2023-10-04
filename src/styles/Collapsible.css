@@ -1,23 +1,15 @@
 .wrapper {
-  width: 100vw;
   height: auto;
 }
 .dropdown {
   margin: 0 auto;
-  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
-
   margin-bottom: 30px;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media (min-width: 600px) {
-    width: 80%;
-  }
 }
 
 .title {
@@ -32,26 +24,22 @@
   text-align: left;
   height: 30px;
   cursor: pointer;
-
-  @media (min-width: 600px) {
-    height: 47px;
-  }
 }
 
 .title h2 {
   font-weight: 500;
   padding: 0 20px;
   font-size: 13px;
-
-  @media (min-width: 600px) {
-    font-size: 24px;
-  }
 }
 
 .arrows {
   padding: 20px;
   font-size: 20px;
   font-weight: 500;
+}
+
+.arrows img {
+  height: 20px;
 }
 
 .content {
@@ -61,15 +49,32 @@
   width: 100%;
   background-color: #f6f6f6;
   color: #ff6060;
-  font-size: 12px;
+  font-size: 14px;
   text-align: start;
-
-  @media (min-width: 650px) {
-    font-size: 24px;
-  }
 }
 
 .show {
   height: auto;
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
+}
+
+/*******  MEDIA QUERIES  *******/
+@media (min-width: 600px) {
+  .title {
+    height: 40px;
+  }
+
+  .title h2 {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 900px) {
+  .dropdown {
+    max-width: 75%;
+  }
 }

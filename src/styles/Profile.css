@@ -1,81 +1,27 @@
 .profile-container {
   justify-content: space-between;
   margin: 20px auto;
-  max-width: 90%;
   color: #ff6060;
-
-  @media (min-width: 600px) {
-    display: flex;
-  }
 }
+
+/* DIV APPART-NAME */
 
 .appart-title {
   font-weight: 500;
+  font-size: 19px;
 }
 
 .apart-city {
   margin: 10px 0;
-
-  @media (min-width: 600px) {
-    margin: 20px 0;
-  }
+  font-size: 13px;
 }
+
+/* DIV TAG CONTAINER */
 
 .tag-container {
   display: flex;
   gap: 20px;
-}
-
-.tenant {
-  display: flex;
-  align-items: center;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-
-  @media (min-width: 600px) {
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
-}
-
-.tenant-profile {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-
-  @media (min-width: 600px) {
-    gap: 20px;
-  }
-}
-
-.tenant-name {
-  font-size: 12px;
-  font-weight: 400;
-  text-wrap: balance;
-
-  @media (min-width: 600px) {
-    font-size: 24px;
-    font-weight: 400;
-  }
-}
-
-.tenant-photo {
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  background-color: #c4c4c4;
-
-  @media (min-width: 600px) {
-    height: 100px;
-    width: 100px;
-  }
-}
-
-.rating {
-  @media (min-width: 600px) {
-    margin-right: 30px;
-  }
+  margin-bottom: 10px;
 }
 
 .tag {
@@ -84,24 +30,40 @@
   align-items: center;
   background-color: #ff6060;
   color: white;
-  height: 100%px;
+  font-size: 9px;
+  height: 100%;
   width: auto;
-  padding: 5px 20px;
-  border-radius: 30px;
-
-  /* @media (min-width: 480px) {
-    height: 25px;
-    width: 115px;
-    border-radius: 10px;
-  } */
+  padding: 3px 18px;
+  border-radius: 5px;
 }
 
-/* 
-.tag-name {
-  color: #ffffff;
-  font-size: 10px;
+/* DIV TENANT */
 
-  @media (min-width: 480px) {
-    font-size: 14px;
-  }
-} */
+.tenant {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.tenant-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tenant-name {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.tenant-photo {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #c4c4c4;
+}

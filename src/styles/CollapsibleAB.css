@@ -1,12 +1,3 @@
-.collapsibles-wrapper {
-  width: 80vw;
-  margin: 0 90px;
-  height: auto;
-
-  @media (min-width: 600px) {
-    margin: 0 90px;
-  }
-}
 .collapsibles {
   margin: 0 auto;
   width: 100%;
@@ -18,10 +9,15 @@
   flex-wrap: wrap;
 
   @media (min-width: 600px) {
-    /* width: 80%; */
+    width: 100%;
     gap: 50px;
     flex-wrap: nowrap;
   }
+}
+
+.collapsibles-wrapper {
+  width: 100%;
+  /* height: auto; */
 }
 
 .collapsibles-title {
@@ -29,33 +25,28 @@
   align-items: center;
   justify-content: space-between;
   background-color: #ff6060;
-  width: 100%;
   border: none;
   border-radius: 5px;
   color: white;
   text-align: left;
   height: 30px;
   cursor: pointer;
-
-  @media (min-width: 600px) {
-    height: 47px;
-  }
 }
 
 .collapsibles-title h2 {
   font-weight: 500;
   padding: 0 20px;
-  font-size: 13px;
-
-  @media (min-width: 600px) {
-    font-size: 24px;
-  }
+  font-size: 14px;
 }
 
 .collapsibles-arrows {
   padding: 20px;
   font-size: 20px;
   font-weight: 500;
+}
+
+.collapsibles-arrows img {
+  height: 20px;
 }
 
 .collapsibles-content {
@@ -65,12 +56,8 @@
   width: 100%;
   background-color: #f6f6f6;
   color: #ff6060;
-  font-size: 12px;
+  font-size: 14px;
   text-align: start;
-
-  @media (min-width: 650px) {
-    font-size: 24px;
-  }
 }
 
 .show {
@@ -81,4 +68,20 @@
 
 .list {
   display: flex;
+}
+
+
+/*******  MEDIA QUERIES  *******/
+@media (min-width: 600px) {
+  .collapsibles-title {
+    height: 40px;
+  }
+
+  .collapsibles-title h2 {
+    font-size: 16px;
+  }
+
+  .content {
+    font-size: 16px;
+  }
 }

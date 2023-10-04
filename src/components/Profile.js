@@ -10,6 +10,12 @@ import { CollapsibleB } from './CollapsibleB'
 // import logement_thumbnail from '../images/logement_thumbnail.png'
 
 export const Profile = ({ data }) => {
+  const fullname = data[0].host.name.split(' ')
+  console.log(fullname)
+  const firstName = fullname[0]
+  const lastName = fullname[1]
+  console.log(firstName, lastName)
+
   return (
     <div>
       <div className="profile-container">
@@ -28,7 +34,10 @@ export const Profile = ({ data }) => {
         </div>
         <div className="tenant">
           <div className="tenant-profile">
-            <h2 className="tenant-name">{data[0].host.name}</h2>
+            <h2 className="tenant-name">
+              <span className="first">{firstName}</span>
+              <span className="second">{lastName}</span>
+            </h2>
             <img
               src={data[0].host.picture}
               alt={data[0].host.name}

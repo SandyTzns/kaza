@@ -21,6 +21,7 @@
 
 .arrow {
   position: absolute;
+  height: 50px;
 }
 
 .arrow:hover {
@@ -41,4 +42,11 @@
   font-size: 20px;
   font-weight: 500;
   bottom: 10px;
+}
+
+/*******  MEDIA QUERIES  *******/
+@media (min-width: 600px) {
+  .arrow {
+    height: 100px;
+  }
 }

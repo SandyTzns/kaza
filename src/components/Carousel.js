@@ -47,3 +47,8 @@ export const Carousel = ({ data }) => {
     </div>
   )
 }
+
+//  classname={data[0]'pictures.length < 2? "arrow arrow-forward hidden" : "arrow arrow-forward"}
+
+//  classname={data[0]'pictures.length < 2? "indicator hidden" : "indicator arrow-forward"}
+// }
