@@ -1,29 +1,21 @@
 import '../styles/Carousel.css'
 import '../styles/Profile.css'
-import '../styles/CollapsibleAB.css'
+
 import { Ratings } from './Ratings'
-import { CollapsibleA } from './CollapsibleA'
-import { CollapsibleB } from './CollapsibleB'
-
-// import appart from '../data/appart.json'
-
-// import logement_thumbnail from '../images/logement_thumbnail.png'
 
 export const Profile = ({ data }) => {
-  const fullname = data[0].host.name.split(' ')
-  console.log(fullname)
+  const fullname = data.host.name.split(' ')
   const firstName = fullname[0]
   const lastName = fullname[1]
-  console.log(firstName, lastName)
 
   return (
     <div>
       <div className="profile-container">
         <div className="apart-name">
-          <h2 className="appart-title">{data[0].title}</h2>
-          <p className="apart-city">{data[0].location}</p>
+          <h2 className="appart-title">{data.title}</h2>
+          <p className="apart-city">{data.location}</p>
           <div className="tag-container">
-            {data[0].tags.map((tag) => {
+            {data.tags.map((tag) => {
               return (
                 <div className="tag" key={tag}>
                   {tag}
@@ -39,20 +31,16 @@ export const Profile = ({ data }) => {
               <span className="second">{lastName}</span>
             </h2>
             <img
-              src={data[0].host.picture}
-              alt={data[0].host.name}
+              src={data.host.picture}
+              alt={data.host.name}
               className="tenant-photo"
-              key={data[0].id}
+              key={data.id}
             ></img>
           </div>
           <div className="rating">
             <Ratings data={data} />
           </div>
         </div>
-      </div>
-      <div className="collapsibles">
-        <CollapsibleA data={data} />
-        <CollapsibleB data={data} />
       </div>
     </div>
   )

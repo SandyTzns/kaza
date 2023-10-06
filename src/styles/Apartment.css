@@ -1,0 +1,11 @@
+.aptCollapse {
+  display: flex;
+
+  align-items: center;
+  gap: 50px;
+
+  @media (max-width: 600px) {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}

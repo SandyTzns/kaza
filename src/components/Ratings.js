@@ -6,7 +6,7 @@ export const Ratings = ({ data }) => {
   return (
     <div className="stars">
       {starsArray.map((element) => {
-        const nbOfStars = parseInt(data[0].rating)
+        const nbOfStars = parseInt(data.rating)
         return (
           <span
             key={'star-' + element}

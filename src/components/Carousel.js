@@ -7,11 +7,11 @@ export const Carousel = ({ data }) => {
   const [slide, setSlide] = useState(0)
 
   const nextSlide = () => {
-    setSlide(slide === data[0].pictures.length - 1 ? 0 : slide + 1)
+    setSlide(slide === data.pictures.length - 1 ? 0 : slide + 1)
   }
 
   const prevSlide = () => {
-    setSlide(slide === 0 ? data[0].pictures.length - 1 : slide - 1)
+    setSlide(slide === 0 ? data.pictures.length - 1 : slide - 1)
   }
 
   return (
@@ -23,7 +23,7 @@ export const Carousel = ({ data }) => {
         className="arrow arrow-back"
       />
 
-      {data[0].pictures.map((pic, idx) => {
+      {data.pictures.map((pic, idx) => {
         return (
           <img
             src={pic}
@@ -41,8 +41,8 @@ export const Carousel = ({ data }) => {
         className="arrow arrow-forward"
       />
 
-      <span key={data[0].id} className="indicator">
-        {slide + 1} / {data[0].pictures.length}
+      <span key={data.id} className="indicator">
+        {slide + 1} / {data.pictures.length}
       </span>
     </div>
   )

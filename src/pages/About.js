@@ -7,7 +7,13 @@ export const About = () => {
   return (
     <div>
       <AboutBanner />
-      <Collapsible data={aboutData} />
+      {aboutData.map((el) => (
+        <Collapsible
+          title={el.title}
+          content={el.content}
+          key={el.title}
+        ></Collapsible>
+      ))}
     </div>
   )
 }
