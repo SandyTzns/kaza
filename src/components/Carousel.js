@@ -14,13 +14,19 @@ export const Carousel = ({ data }) => {
     setSlide(slide === 0 ? data.pictures.length - 1 : slide - 1)
   }
 
+  //  classname={data.pictures.length < 2? "arrow arrow-back slide-hidden" : "arrow arrow-back"}
+
   return (
     <div className="carousel">
       <img
         src={arrow_back}
         alt="arrow back"
         onClick={prevSlide}
-        className="arrow arrow-back"
+        className={
+          data.pictures.length < 2
+            ? 'arrow arrow-back slide-hidden'
+            : 'arrow arrow-back'
+        }
       />
 
       {data.pictures.map((pic, idx) => {
@@ -38,17 +44,26 @@ export const Carousel = ({ data }) => {
         src={arrow_forward}
         alt="arrow forward"
         onClick={nextSlide}
-        className="arrow arrow-forward"
+        className={
+          data.pictures.length < 2
+            ? 'arrow arrow-forward slide-hidden'
+            : 'arrow arrow-forward'
+        }
       />
 
-      <span key={data.id} className="indicator">
+      <span
+        key={data.id}
+        className={
+          data.pictures.length < 2 ? 'indicator slide-hidden' : 'indicator'
+        }
+      >
         {slide + 1} / {data.pictures.length}
       </span>
     </div>
   )
 }
 
-//  classname={data[0]'pictures.length < 2? "arrow arrow-forward hidden" : "arrow arrow-forward"}
+//  classname={data.pictures.length < 2? "arrow arrow-forward slide-hidden" : "arrow arrow-forward"}
 
-//  classname={data[0]'pictures.length < 2? "indicator hidden" : "indicator arrow-forward"}
+//  classname={data.pictures.length < 2? "indicator slide-hidden" : "indicator arrow-forward"}
 // }
