@@ -1,24 +1,28 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import '../styles/Collapsible.css'
-// import arrow_down from '../images/arrow_down.png'
+import arrow_down from '../images/arrow_down.png'
 import arrow_up from '../images/arrow_up.png'
 
 export const Collapsible = ({ title, content }) => {
-  // const [active, setActive] = useState(false)
+  const [active, setActive] = useState(null)
 
-  const handleToggle = (e) => {
-    console.log(e)
+  const showContent = () => {
+    setActive(!active)
   }
 
   return (
     <div className="dropdown">
-      <button className="title" onClick={handleToggle}>
+      <button className="title" onClick={showContent}>
         <h2>{title}</h2>
         <span className="arrows">
-          <img src={arrow_up} alt="arrow up" />
+          {active ? (
+            <img src={arrow_up} alt="arrow up" />
+          ) : (
+            <img src={arrow_down} alt="arrow down" />
+          )}
         </span>
       </button>
-      <div className="content">
+      <div className={active ? 'content show' : 'content'}>
         {Array.isArray(content) ? (
           content.map((item, i) => {
             return (
@@ -42,14 +46,14 @@ export const Collapsible = ({ title, content }) => {
 //         <div className="title" onClick={() => toggle(i)}>
 //           <h2>{item.title}</h2>
 //           <span className="arrows">
-//             {selected ? (
+//             {active ? (
 //               <img src={arrow_up} alt="arrow up" />
 //             ) : (
 //               <img src={arrow_down} alt="arrow down" />
 //             )}
 //           </span>
 //         </div>
-//         <div className={selected ? 'content show' : 'content'}>
+//         <div className={active ? 'content show' : 'content'}>
 //           {item.content}
 //         </div>
 //       </div>

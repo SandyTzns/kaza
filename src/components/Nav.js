@@ -1,21 +1,23 @@
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import logo from '../images/logo.jpg'
 import '../styles/Nav.css'
 
 export const Nav = () => {
   return (
     <nav>
-      <Link to="/">
+      <NavLink to="/">
         <img src={logo} alt="logo" className="logo"></img>
-      </Link>
+      </NavLink>
       <ul>
         <li>
-          <Link to="/" className="active">
+          <NavLink to="/" className="link">
             Accueil
-          </Link>
+          </NavLink>
         </li>
         <li>
-          <Link to="/about">A propos</Link>
+          <NavLink to="/about" className="link">
+            A propos
+          </NavLink>
         </li>
       </ul>
     </nav>

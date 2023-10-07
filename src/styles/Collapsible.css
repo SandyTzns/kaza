@@ -60,7 +60,7 @@
 }
 
 .show {
-  height: 150px;
+  height: auto;
   padding: 15px;
   transition: all 0.5s cubic-bezier(0, 1, 0, 1);
 }

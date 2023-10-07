@@ -24,7 +24,7 @@ nav ul a {
   font-weight: 500;
 }
 
-nav ul li .active {
+nav ul a[aria-current='page'] {
   border-bottom: 2px solid #ff6060;
 }
 
