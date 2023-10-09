@@ -56,14 +56,14 @@
 .tenant-name {
   display: flex;
   flex-direction: column;
-  align-items: end;
-  font-size: 11px;
+  align-items: flex-end;
+  font-size: 12px;
   font-weight: 500;
 }
 
 .tenant-photo {
-  height: 35px;
-  width: 35px;
+  height: 32px;
+  width: 32px;
   border-radius: 50%;
   background-color: #c4c4c4;
 }
@@ -75,20 +75,32 @@
     justify-content: space-evenly;
   }
 
+  .tenant-name {
+    font-size: 18px;
+  }
+
   .tenant-photo {
-    height: 60px;
-    width: 60px;
+    height: 64px;
+    width: 64px;
   }
 
   .profile-container {
     display: flex;
   }
 
+  .tag-container {
+    margin-bottom: 0;
+  }
+
   .tag {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .appart-title {
+    font-size: 36px;
   }
 
   .apart-city {
-    font-size: 13px;
+    font-size: 18px;
   }
 }

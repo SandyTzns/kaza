@@ -1,5 +1,6 @@
 .nf-div {
-  height: 100vh;
+  min-height: 100vh;
+  min-width: 100wh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,16 +9,30 @@
 }
 
 .nf-number {
-  font-size: 288px;
-  font-weight: bold;
+  font-size: 96px;
 }
 
 .nf-text {
-  font-size: 36px;
+  font-size: 18px;
 }
 
 .nf-link {
   color: #ff6060;
-  padding-top: 100px;
-  font-size: 18px;
+  padding-top: 90px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .nf-number {
+    font-size: 288px;
+    font-weight: bold;
+  }
+
+  .nf-text {
+    font-size: 36px;
+  }
+
+  .nf-link {
+    font-size: 18px;
+  }
 }
