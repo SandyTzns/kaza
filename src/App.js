@@ -9,7 +9,7 @@ import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kaza">
       <Layout>
         <Nav />
         <Routes>
