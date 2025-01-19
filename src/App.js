@@ -9,11 +9,11 @@ import { Footer } from './components/Footer'
 
 function App() {
   return (
-    <BrowserRouter >
+    <BrowserRouter>
       <Layout>
         <Nav />
         <Routes>
-          <Route path="/kaza" element={<Home />}></Route>
+          <Route path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/logement/:logementId" element={<Apartment />}></Route>
           <Route path="*" element={<NotFound />}></Route>
