@@ -16,6 +16,7 @@ function App() {
           <Route path="/kaza" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/logement/:logementId" element={<Apartment />}></Route>
+          <Route path="/" element={<Navigate to="/kaza" />} />
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </Layout>
