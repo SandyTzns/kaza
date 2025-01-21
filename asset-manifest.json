@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/kaza/static/css/main.6c4f8901.css",
-    "main.js": "/kaza/static/js/main.6721b434.js",
+    "main.js": "/kaza/static/js/main.8af8f6d8.js",
     "static/js/787.5f96be30.chunk.js": "/kaza/static/js/787.5f96be30.chunk.js",
     "static/media/about_banner.jpg": "/kaza/static/media/about_banner.d674f3ea4befa803a270.jpg",
     "static/media/home_banner.jpg": "/kaza/static/media/home_banner.ae406f1e12bcdcd3cb86.jpg",
     "static/media/logo.jpg": "/kaza/static/media/logo.f86a6e2dad861d2966d1.jpg",
     "index.html": "/kaza/index.html",
     "main.6c4f8901.css.map": "/kaza/static/css/main.6c4f8901.css.map",
-    "main.6721b434.js.map": "/kaza/static/js/main.6721b434.js.map",
+    "main.8af8f6d8.js.map": "/kaza/static/js/main.8af8f6d8.js.map",
     "787.5f96be30.chunk.js.map": "/kaza/static/js/787.5f96be30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6c4f8901.css",
-    "static/js/main.6721b434.js"
+    "static/js/main.8af8f6d8.js"
   ]
 }
