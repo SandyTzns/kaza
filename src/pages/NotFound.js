@@ -7,7 +7,7 @@ export const NotFound = () => {
     <div className="nf-div">
       <h1 className="nf-number">404</h1>
       <p className="nf-text">Oups! La page que vous demandez n'existe pas.</p>
-      <Link to="/" className="nf-link">
+      <Link to="/kaza" className="nf-link">
         Retourner sur la page d'accueil
       </Link>
     </div>

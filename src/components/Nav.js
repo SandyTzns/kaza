@@ -5,12 +5,12 @@ import '../styles/Nav.css'
 export const Nav = () => {
   return (
     <nav>
-      <NavLink to="/">
+      <NavLink to="/kaza">
         <img src={logo} alt="logo" className="logo"></img>
       </NavLink>
       <ul>
         <li>
-          <NavLink to="/" className="link">
+          <NavLink to="/kaza" className="link">
             Accueil
           </NavLink>
         </li>
